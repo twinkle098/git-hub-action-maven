@@ -1,0 +1,27 @@
+
+<server>
+    <id />
+    <username />
+    <password />
+    <privateKey />
+    <passphrase />
+    <filePermissions />
+    <directoryPermissions />
+    <configuration>
+        <basicAuthScope>
+            <host>ANY</host>
+            <port>ANY</port>
+            <realm>OAM 11g</realm>
+        </basicAuthScope>
+        <httpConfiguration>
+            <all>
+                <params>
+                    <property>
+                        <name>http.protocol.allow-circular-redirects</name>
+                        <value>%b,true</value>
+                    </property>
+                </params>
+            </all>
+        </httpConfiguration>
+    </configuration>
+</server>

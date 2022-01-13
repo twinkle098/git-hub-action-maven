@@ -1,0 +1,11 @@
+
+<server>
+    <id />
+    <username />
+    <password />
+    <privateKey />
+    <passphrase />
+    <filePermissions />
+    <directoryPermissions />
+    <configuration />
+</server>
