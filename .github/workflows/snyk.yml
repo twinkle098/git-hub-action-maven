@@ -1,0 +1,24 @@
+name: "Generate Snyk GitHub Actions"
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+      - name: Render latest template
+        run: |
+          ruby build.rb
+      - name: Commit to repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+          COMMIT_MSG: |
+            Generated new GitHub Actions templates
+            skip-checks: true
